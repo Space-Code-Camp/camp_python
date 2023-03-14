@@ -25,8 +25,8 @@ Saída:
 Hello, World!
 ```
 
-Finalizamos essa etapa aqui, pode parecer muito confuso esse código, mas iremos aprendendo aos poucos e veremos que não é complicado quanto parece.
+Finalizamos essa etapa aqui, isso tudo pode parecer muito confuso, mas com o tempo veremos que não é complicado quanto parece.
 
 
 ## Agora é com você!
-Agora que já sabemos como imprimir mensagens na tela, crie um programa que exiba a mensagem "Hello, SpaceCampers!" para cumprimentarmos nossos outros companheiros de acampamento
+Agora que já sabemos como imprimir mensagens na tela, crie um programa que exiba a mensagem "Hello, SpaceCampers!" para cumprimentarmos nossos outros companheiros de acampamento nessa jornada
