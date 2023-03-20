@@ -1,0 +1,191 @@
+# 1.2 Operadores
+
+Na matemática fazemos operações sobre elementos, seguindo as regras já estabelecidas pois é uma ciência exata. Os operadores são símbolos que fazem parte desse procedimento, e eles definem qual o procedimento será feito entre os outros elementos.
+
+Por exemplo, os números 3 e 2 (chamados de operandos), esses dois algarismos isolados não representam algo muito útil, pois não tem um contexto, e eles sozinhos não conseguem executar uma operação entre si. É aí que entram os operadores, possibilitando que as operações sejam feitas e retornando o resultado dessas operações.
+
+Na programação também temos esse operadores, porém eles podem ser um pouco diferentes da matemática.
+
+Vamos conhecer operadores básicos e alguns que podem ser um pouco mais complicados nesse momento, mas não se preocupe pois iremos utilizar mais no futuro, o objetivo é apresentá-los agora para já irmos acostumando.
+<br><br>
+
+> Importante lembrar que o sinal de "=" no python não significa igual como na matemática, esse sinal significa **recebe** que  significa que estamos atribuindo valor a uma variável ou constante.
+<br><br>
+
+# 1.2.1 Operadores aritméticos 
+
+
+| Operador      | O que realiza? | Exemplo
+| ------------- | -------------  | -------------
+| + (Adição ou sinal positivo)  | Soma entre operandos   | 4 + 2 = 6
+| - (Subtração ou sinal negativo) | Subtração entre operandos  | 10 - 2 = 8
+|* (Multiplicação) | Multiplicação entre operandos |2 * 5 = 10
+|/ (Divisão) | Divisão entre operandos (o resultado será um float) | 10 / 5 = 2.0
+| // (Divisão inteira) | Divisão entre operandos e a parte decimal do resultado | 10 // 6 = 1
+| % (Módulo) | Retorna o resto da divisão entre operandos | 8 % 5 = 3
+** (Exponenciação) |Retorna o número elevado a potência de outro |5 ** 2 = 25   
+
+<br>
+
+## Operador de adição (+)
+
+O mesmo sinal de “+” que é utilizado na matemática, usamos no python para realizamos operações de adição entre operandos, abaixo exemplos da utilização:
+
+```python
+# Adicao
+print(4 + 4) # 8
+
+print(2.5 + 3.5) # 6.0
+
+print(2 + 3.14) # 5.140000000000001
+```
+<br>
+
+## Operador de subtração (-)
+Usamos no python o mesmo sinal da aritmética "-" para realizar a subtração entre operandos, abaixo exemplos da utilização:
+
+```python
+# Subtracao
+print(9 - 4) # 5
+
+print(8.5 - 3.2) # 5.3
+
+print(4 - 3.25) # 0.75
+```
+<br>
+
+## Operador de multiplicação (*)
+Na aritmética geralmente usamos o símbolo “×” ou ".", para representar o símbolo da multiplicação, em Python utilizamos o símbolo de asterisco (*) para multiplicar
+```python
+# multiplicacao
+print(2 * 4) # 8
+
+print(3.5 * 2.5) # 8.75
+
+print(2 * 3.1415) # 6.283
+```
+<br>
+
+## Operador de divisão (/)
+Em Python utilizamos o símbolo de barra (/) para fazermos divisão entre operandos. Se observarmos o exemplo, veremos que mesmo entre divisões de números inteiros e com resultado que não resultaria em um número decimal (4 / 2 é igual a 2), o tipo de dado do resultado é um float, não tem nada de errado com o código, é o python que trata divisões dessa forma, mas é possível transformamos este tipo de dado de float para inteiro
+```python
+# divisao
+print(4 / 2) # 2.0
+
+print(8.5 / 2.5) # 3.4
+
+print(9 / 2.5) # 3.6
+```
+<br>
+
+## Operador de divisão inteira (//)
+Esse operador realiza a divisão entre operandos e a parte decimal do resultado, não exibe a parte decimal do resultado.
+```python
+# divisao inteira
+print(4 // 2) # 2
+
+print(8.5 // 2.5) # 3.0
+
+print(9 // 2.5) # 3.0
+```
+<br>
+
+## Diferença entre Divisão (/) e divisão inteira (//)
+Com os exemplos vistos anteriormente, vamos verificar quais as diferenças entre esses tipos de divisão. 
+
+Os operandos são iguais, e a divisão resulta em um valor inteiro, ou seja, sem a necessidade de casas decimais. 
+
+Na Divisão (/) podemos observar que o tipo de dado do resultado é um float e na divisão inteira (//) é um inteiro. É interessante relembrar que na divisão (/) sempre teremos um valor do tipo float no resultado, então se quisermos que o resultado seja do tipo inteiro, então usar a divisão inteira é uma das formas.
+```python
+# divisao
+print(4 / 2) # 2.0
+# divisao inteira
+print(4 // 2) # 2
+```
+
+A seguir vamos observar outra característica que diferencia esses tipos de divisões. Na primeira comparação utilizando a divisão (/) o resultado é 3.4, enquanto na divisão inteira (//) o resultado é 3.0, isso acontece quando fazemos uma divisão inteira e o resultado não é um valor inteiro, o python não exibirá o número da casa decimal e manterá apenas o valor da parte que não é decimal, nesse caso o 3. 
+
+```python
+# Primeira comparacao
+# divisao
+print(8.5 / 2.5) # 3.4
+# divisao inteira
+print(8.5 // 2.5) # 3.0
+```
+
+Na segunda comparação, observe que temos uma situação parecida, o python não exibe a casa decimal na divisão inteira. 
+```python
+# Segunda comparacao
+# divisao
+print(9 / 2.5) # 3.6
+# divisao inteira
+print(9 // 2.5) # 3.0
+```
+
+Temos outro ponto que podemos observar, na primeira divisão inteira (//) o python coloca o valor de 3.0 e na segunda 3.0, no caso, se observamos na divisão (/) os valores são diferentes, e até podemos pensar, por que o python não arredonda o número para cima no caso do resultado de 3.6, é porque nesse tipo de divisão como o próprio nome já diz, faz uma divisão e apenas considera a parte inteira, depois veremos como arredondar valores.
+<br><br>
+
+## Operador de módulo (%)
+Esse operador pode parecer estranho para algumas pessoas, mas sua utilização é bem simples. Na aritmética quando fazemos divisões conseguimos obter o resto (também chamado de diferença) da divisão entre os operandos. O operador de módulo (%) é usado para obtermos o resto de divisões **INTEIRAS**, esse operador é muito usado quando queremos verificar se um número é par ou ímpar.
+```python
+# modulo
+print(4 % 2) # 0
+
+print(8.75 % 2.5) # 1.25
+
+print(20 % 2.25) # 2.0
+```
+
+
+## Operador de exponenciação ou potenciação (**)
+Para calcularmos um número elevado a outro, no python utilizamos dois asteriscos seguidos e sem espaços. Aqui não tem muito segredo, colocamos a esquerda a base, ou seja, o número que deverá ser elevado, no meio **, e na direita o expoente.
+
+```python
+# exponenciacao
+print(4 ** 2) # 16
+
+print(1.5 ** 0.5) # 1.224744871391589
+
+print(2 ** 0.5) # 1.4142135623730951
+```
+<br>
+
+## Exercícios 
+
+### 1 - Fixando os operadores aritméticos
+Utilizando a função <code>print()</code>, faça no mínimo duas de cada uma das operações utilizando os operadores que conhecemos, guarde na variável e depois imprima o valor
+Exemplo:
+```python
+# Soma
+soma = 4 + 2
+print(soma)
+
+soma = 2.5 + 3.5
+print(soma)
+```
+<br>
+
+### 2 - Utilize mais de um operador
+Utilize mais de um operador na mesma expressão, se o resultado não sair como o esperado lembre-se que o python calcula primeiro o valor dentro do parentes "mais interno" como na matemática. Depois veremos também que os operadores têm uma ordem de precedência como na matemática.
+```python
+# Expressao
+expressao = 15 + 5 - 3 * (2 + (10 / 5))
+print(expressao) # 8.0
+```
+<br>
+
+### 3 - Criando uma calculadora
+Utilizando a função <code>input()</code> armazene o valor de dois números inteiros, os nomes da variaveis para guardar os valores devem ser *numero_1* e *numero_2*, faça a operação com cada operador aritmético. 
+
+Para exibir os valores use a função <code>print()</code>, e coloque qual operação está sendo realizada e seu resultado
+
+Desafio extra: No <code>print()</code> informe o valor informado no que está armazenado nas duas variaveis (*numero_1* e *numero_2*) e informe a expressão utilizada
+
+Exemplo:
+```python
+# SOMA
+soma = numero_1 + numero_2
+print('Operação de Adição')
+print(f'{numero_1} + {numero_2} = {soma}')
+```
+Se tiver dificuldade, lembre-se que por padrão a função <code>input()</code> retornará uma **string**, mesmo se for passados números ela considera o número como caractere, então pode ser necessário utilizar a função para conversão para inteiro <code>int()</code>
